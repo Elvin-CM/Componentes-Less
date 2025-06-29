@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-direction: column;
+}
+main {
+    flex:1;
+}
+.Subtitulo {
+    font-family: @fuente-global;
+    font-size: 1.7rem;
+    color: #333;
+    margin: 1.5rem;
+    text-align: center;
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+//Importaciones
+@import "navbar.less";
+@import "hero.less";
+@import 'cards.less';
+@import "footer.less";
+@import "hero_invertido.less";
+
+//Uso de variables
+@fuente-global: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+#breaks {
+    tablet: 768px;
+    desktop: 1025px;
+    wide: 2300px;
+}
+
+#breaks-prefix {
+    mobile: sm;
+    tablet: md;
+    desktop: lg;
+    wide: xl;
+}

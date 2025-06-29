@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="less/principal.less" />
+  <title>5 componentes en Less</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://picsum.photos/id/237/200/300" alt="Logo de la organizacion" />
+      <p>Minila's Software</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#Servicios">Servicios</a></li>
+        <li><a href="#Contacto">Contacto</a></li>
+      </ul>
+  </header>
+  <main>
+    <div class="hero">
+      <div class="hero-bienvenida">
+        <h1>Bienvenido a Minila's Software</h1>
+        <p>Desarrollamos soluciones tecnológicas a tu medida.</p>
+      </div>
+      <picture>
+        <source srcset="https://picsum.photos/id/237/1500/1000" media="(min-width:1025px)" />
+        <source srcset="https://picsum.photos/id/237/1024/720" media="(min-width:720px)" />
+        <img src="https://picsum.photos/id/237/480/480" alt="Imagen del Hero" />
+      </picture>
+    </div>
+    <h2 id="Servicios" class="Subtitulo">Servicios</h2>
+    <section class="cards">
+      <div class="card">
+        <img src="https://picsum.photos/id/1010/400/300" alt="Imagen de ejemplo">
+        <h3>Desarrollo Web</h3>
+        <p>Creamos sitios web modernos, responsivos y optimizados para tu negocio.</p>
+        <button>Ver más</button>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1011/400/300" alt="Imagen de ejemplo">
+        <h3>Aplicaciones Móviles</h3>
+        <p>Diseñamos apps intuitivas para Android y iOS según tus necesidades.</p>
+        <button>Ver más</button>
+      </div>
+
+      <div class="card">
+        <img src="https://picsum.photos/id/1012/400/300" alt="Imagen de ejemplo">
+        <h3>Automatización</h3>
+        <p>Optimizamos tus procesos con soluciones automatizadas y eficientes.</p>
+        <button>Ver más</button>
+      </div>
+    </section>
+    <h2 id="Contacto" class="Subtitulo">Contacto</h2>
+    <div class="grid-container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 ">
+          <div class="mitad-texto">
+            <h2>Impulsa tu negocio con tecnología</h2>
+            <p>
+              En Minila's Software brindamos soluciones digitales a la medida, diseñadas para optimizar tus procesos,
+              mejorar tu presencia en línea y ayudarte a alcanzar tus objetivos en un mundo cada vez más digital.
+              Nuestra experiencia combina tecnología, creatividad y compromiso para impulsar el crecimiento de tu
+              negocio.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 ">
+          <img src="https://picsum.photos/id/870/800/900?grayscale&blur=2" alt="Mitad de imagen"/>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h4>Minila's Software</h4>
+        <p>© 2025 Todos los derechos reservados.</p>
+        <p>Contacto: contacto@minilasoftware.com</p>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,10 +1,12 @@
 import { defineConfig } from "vite";
 import htmlPurge from 'vite-plugin-purgecss';
-import { ViteMinifyPlugin } from 'vite-plugin-minify';
+import { ViteMinifyPlugin} from 'vite-plugin-minify'; //Plugin para minificar el código html
+//spa single page application
+//mpa multi page application
 import path, {resolve} from 'node:path';
-import * as glob from 'glob';
+import * as glob from 'glob'; //Glob sirve para tener mas de un index.html
 
-const obtenerEntradas = ()=> {
+const obtenerEntradas=()=>{ //Entradas son archivos que van a entrar a un proceso de compilación
     return Object.fromEntries(
         [
             ...glob.sync(
@@ -23,21 +25,21 @@ const obtenerEntradas = ()=> {
             )
         ]
     );
-}
 
+} 
 export default defineConfig(
     {
-        appType: 'mpa',
-        base: process.env.DEPLOY_BASE_URL,
-        build: {
-            rollupOptions: {
-                input: obtenerEntradas()
+        appType:'mpa',
+        base: process.env.DEPLOY_BASE_URL, //Base URL para el despliegue, si no se especifica, se usa la raíz del dominio
+        build:{
+            rollupOptions:{
+                input:obtenerEntradas()
             },
-            minify: true
+            minify: true, //Minifica el código, borra los comentarios y espacios en blanco
         },
-        plugins: [
+        plugins:[
             htmlPurge({}),
             ViteMinifyPlugin(),
         ]
     }
-);
+)
